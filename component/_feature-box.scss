@@ -1,0 +1,33 @@
+.feature-box{
+    background-color: rgba($color-white, .8);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: -1.2rem 1.4rem 1rem rgba($color-black, .8);
+    transition: transform .3s;
+    transform: skewY(-7deg);
+
+    @include respond(tab-port){
+        padding: 2rem;
+    }
+
+    &__icon{
+        font-size: 6rem;
+        margin-bottom: .5rem;
+        display: inline-block;
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        letter-spacing: .2rem;
+        background-clip: "";
+        -webkit-background-clip: text; //this will make background as same text cut
+        color: transparent;
+
+        @include respond(tab-port){
+            margin-bottom: -1.2rem;
+        }
+    }
+
+    &:hover{
+        transform: translateY(-1.5rem) scale(1.05);// positive traslate will occur from right/front and negative from left/behind
+    }
+}
